@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+@import "./variables";
+@import "./mixins";
+
+// general
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Almarai', sans-serif;
+}
+
+// header
+header {
+
+    // navbar
+    .navbar {
+        padding: 10px;
+        border-bottom: 1px solid $gray-color;
+
+        &-brand {
+            color: $main-color;
+            font-size: 34px;
+        }
+
+        .nav-link {
+            font-size: 22px;
+            color: $black-color;
+            margin-right: 20px;
+            transition: all 0.5s;
+
+            &:hover {
+                color: $main-color;
+                text-decoration: underline;
+            }
+        }
+
+        .login {
+            position: relative;
+
+            i {
+                font-size: 30px;
+                margin-left: 15px;
+                color: $gray-color;
+                cursor: pointer;
+            }
+
+            &-container {
+                position: absolute;
+                width: 250px;
+                height: 100px;
+                background-color: $white-color;
+                border: 1px solid $gray-color;
+                text-align: center;
+                padding: 20px;
+                border-radius: 10px;
+                top: 50px;
+                right: -115px;
+                visibility: hidden;
+                transition: all 0.5s;
+                
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background-color: $white-color;
+                    transform: rotate(45deg) translateX(50%);
+                    top: -18px;
+                    right: 50%;
+                    border-top: 1px solid $gray-color;
+                    border-left: 1px solid $gray-color;
+                }
+
+                .button {
+                    @include button($main-color, $white-color, $main-color);
+                }
+            }
+
+            &:hover {
+                .login-container {
+                    visibility: visible;
+                    .button{
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+
+        form {
+
+            .serach-icon {
+                padding: 2px;
+
+                i {
+                    font-size: 30px;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
