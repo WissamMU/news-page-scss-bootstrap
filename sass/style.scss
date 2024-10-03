@@ -11,6 +11,34 @@
 body {
     font-family: 'Almarai', sans-serif;
 }
+img{
+    width: 100%;
+}
+
+.article {
+    &-category {
+        padding: 5px 10px;
+        background-color: $main-color;
+        color: $white-color;
+        margin-left: 10px;
+    }
+
+    &-title {
+        font-size: 20px;
+        display: inline;
+        color: $black-color;
+    }
+
+    &-link {
+        text-decoration: none;
+        color: $black-color;
+        &:hover {
+            .article-title {
+                text-decoration: underline;
+            }
+        }
+    }
+}
 
 // header
 header {
@@ -19,6 +47,7 @@ header {
     .navbar {
         padding: 10px;
         border-bottom: 1px solid $gray-color;
+        background-color: $white-color;
 
         &-brand {
             color: $main-color;
@@ -60,7 +89,7 @@ header {
                 right: -115px;
                 visibility: hidden;
                 transition: all 0.5s;
-                
+
                 &::after {
                     position: absolute;
                     content: "";
@@ -82,7 +111,8 @@ header {
             &:hover {
                 .login-container {
                     visibility: visible;
-                    .button{
+
+                    .button {
                         visibility: visible;
                     }
                 }
@@ -99,6 +129,81 @@ header {
                     color: $main-color;
                 }
             }
+        }
+    }
+
+    .header-news {
+        margin-top: 50px;
+
+        .carousel {
+            &-news {
+                margin-top: 50px;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    left: -10px;
+                    top: 150px;
+                    height: 200px;
+                    width: 20px;
+                    background-color: $main-color;
+                }
+            }
+
+            &-text {
+                padding: 20px 10px 70px;
+                color: $white-color;
+                background-color: rgba($color: $black-color, $alpha: 0.5);
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 750px;
+
+                h3 {
+                    font-size: 22px;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        height: 85px;
+                        width: 5px;
+                        background-color: $main-color;
+                        top: -10px;
+                        left: 250px;
+                    }
+                }
+            }
+
+            &-indicators {
+                left: -550px;
+
+                button {
+                    height: 20px;
+                    width: 20px;
+                    text-indent: 0;
+                }
+            }
+
+            &-item {
+                img {
+                    max-height: 490px;
+                }
+
+                &:hover {
+                    .carousel-text {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-articles {
+        margin-top: 50px;
+        .row {
+            margin-top: 40px;
         }
     }
 }

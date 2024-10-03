@@ -8,9 +8,33 @@ body {
   font-family: "Almarai", sans-serif;
 }
 
+img {
+  width: 100%;
+}
+
+.article-category {
+  padding: 5px 10px;
+  background-color: #B80000;
+  color: #fff;
+  margin-left: 10px;
+}
+.article-title {
+  font-size: 20px;
+  display: inline;
+  color: #000;
+}
+.article-link {
+  text-decoration: none;
+  color: #000;
+}
+.article-link:hover .article-title {
+  text-decoration: underline;
+}
+
 header .navbar {
   padding: 10px;
   border-bottom: 1px solid #B1AEAE;
+  background-color: #fff;
 }
 header .navbar-brand {
   color: #B80000;
@@ -86,6 +110,64 @@ header .navbar form .serach-icon {
 header .navbar form .serach-icon i {
   font-size: 30px;
   color: #B80000;
+}
+header .header-news {
+  margin-top: 50px;
+}
+header .header-news .carousel-news {
+  margin-top: 50px;
+  position: relative;
+}
+header .header-news .carousel-news::after {
+  position: absolute;
+  content: "";
+  left: -10px;
+  top: 150px;
+  height: 200px;
+  width: 20px;
+  background-color: #B80000;
+}
+header .header-news .carousel-text {
+  padding: 20px 10px 70px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 750px;
+}
+header .header-news .carousel-text h3 {
+  font-size: 22px;
+  position: relative;
+}
+header .header-news .carousel-text h3::after {
+  content: "";
+  position: absolute;
+  height: 85px;
+  width: 5px;
+  background-color: #B80000;
+  top: -10px;
+  left: 250px;
+}
+header .header-news .carousel-indicators {
+  left: -550px;
+}
+header .header-news .carousel-indicators button {
+  height: 20px;
+  width: 20px;
+  text-indent: 0;
+}
+header .header-news .carousel-item img {
+  max-height: 490px;
+}
+header .header-news .carousel-item:hover .carousel-text {
+  text-decoration: underline;
+}
+header .header-articles {
+  margin-top: 50px;
+}
+header .header-articles .row {
+  margin-top: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
