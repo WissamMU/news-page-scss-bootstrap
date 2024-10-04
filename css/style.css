@@ -170,4 +170,104 @@ header .header-articles .row {
   margin-top: 40px;
 }
 
+section.news {
+  padding: 50px;
+}
+section.news .article-link img {
+  max-height: 170px;
+}
+section.news .article-link .article-text h5 {
+  font-size: 18px;
+}
+section.news .button {
+  background-color: #B80000;
+  color: #fff;
+  border: 1px solid #B80000;
+  padding: 2px 30px;
+  border-radius: 5px;
+  transition: all 0.5s;
+  text-decoration: none;
+  font-size: 20px;
+}
+section.news .button:hover {
+  background-color: #fff;
+  color: #B80000;
+}
+section.most-read {
+  padding: 50px;
+  background-color: #F0F0F0;
+}
+section.most-read .card-news {
+  padding: 50px;
+  background-color: #fff;
+  margin: 30px;
+}
+section.most-read .card-news a {
+  color: #000;
+  text-decoration: none;
+}
+section.most-read .card-news:hover h4 {
+  text-decoration: underline;
+}
+section.most-read .card-text h4 {
+  font-size: 30px;
+}
+section.most-read .card-text p {
+  font-size: 14px;
+  margin: 35px auto;
+}
+section.most-read .card-text time {
+  color: #B1AEAE;
+  font-size: 16px;
+}
+section.most-read .card-img {
+  position: relative;
+  margin-bottom: 20px;
+}
+section.most-read .card-img::after {
+  content: "";
+  position: absolute;
+  background-color: #B80000;
+  height: 4%;
+  width: 30%;
+  bottom: -2%;
+  right: 5%;
+}
+section.opinions {
+  padding: 50px;
+}
+section.opinions a {
+  text-decoration: none;
+}
+section.opinions .opinions-card {
+  padding: 20px 10px;
+  background-color: rgba(184, 0, 0, 0.3);
+  margin-top: 25px;
+  transition: all 0.5s;
+}
+section.opinions .opinions-card h5 {
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+}
+section.opinions .opinions-card .user-info {
+  margin-top: 25px;
+}
+section.opinions .opinions-card .user-info img {
+  width: 100px;
+  clip-path: circle();
+}
+section.opinions .opinions-card .user-info span {
+  font-size: 18px;
+  color: #B80000;
+  font-weight: bold;
+}
+section.opinions .opinions-card:hover {
+  background-color: rgba(184, 0, 0, 0.6);
+}
+section.opinions .opinions-card:hover h5 {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=style.css.map */

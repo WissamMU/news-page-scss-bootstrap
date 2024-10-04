@@ -11,7 +11,8 @@
 body {
     font-family: 'Almarai', sans-serif;
 }
-img{
+
+img {
     width: 100%;
 }
 
@@ -32,6 +33,7 @@ img{
     &-link {
         text-decoration: none;
         color: $black-color;
+
         &:hover {
             .article-title {
                 text-decoration: underline;
@@ -202,8 +204,134 @@ header {
 
     .header-articles {
         margin-top: 50px;
+
         .row {
             margin-top: 40px;
+        }
+    }
+}
+
+
+section {
+    &.news {
+        padding: 50px;
+
+        .article-link {
+            img {
+                max-height: 170px;
+            }
+
+            .article-text {
+                h5 {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .button {
+            @include button($main-color, $white-color, $main-color);
+            font-size: 20px;
+        }
+    }
+
+
+    &.most-read {
+        padding: 50px;
+        background-color: $light-gray-color;
+
+        .card {
+            &-news {
+                padding: 50px;
+                background-color: #fff;
+                margin: 30px;
+
+                a {
+                    color: $black-color;
+                    text-decoration: none;
+                }
+
+                &:hover {
+                    h4 {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &-text {
+                h4 {
+                    font-size: 30px;
+                }
+
+                p {
+                    font-size: 14px;
+                    margin: 35px auto;
+                }
+
+                time {
+                    color: $gray-color;
+                    font-size: 16px;
+                }
+            }
+
+            &-img {
+                position: relative;
+                margin-bottom: 20px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: $main-color;
+                    height: 4%;
+                    width: 30%;
+                    bottom: -2%;
+                    right: 5%;
+                }
+            }
+        }
+    }
+
+    &.opinions {
+        padding: 50px;
+
+        a {
+            text-decoration: none;
+        }
+
+        .opinions-card {
+            padding: 20px 10px;
+            background-color: rgba($color: $main-color, $alpha: 0.3);
+            margin-top: 25px;
+            transition: all .5s;
+
+            h5 {
+                font-size: 16px;
+                color: $black-color;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .user-info {
+                margin-top: 25px;
+
+                img {
+                    width: 100px;
+                    clip-path: circle();
+                }
+
+                span {
+                    font-size: 18px;
+                    color: $main-color;
+                    font-weight: bold;
+                }
+            }
+
+            &:hover {
+                background-color: rgba($color: $main-color, $alpha: 0.6);
+
+                h5 {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
