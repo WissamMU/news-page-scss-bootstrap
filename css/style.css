@@ -269,5 +269,73 @@ section.opinions .opinions-card:hover {
 section.opinions .opinions-card:hover h5 {
   text-decoration: underline;
 }
+section.videos {
+  padding: 50px;
+  background-color: var(#000);
+}
+section.videos h2 {
+  color: #fff;
+  line-height: 50px;
+  position: relative;
+  margin-right: 30px;
+  margin-bottom: 40px;
+}
+section.videos h2::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  top: 0;
+  right: -30px;
+  background-color: #B80000;
+}
+section.videos .slide-img {
+  position: relative;
+}
+section.videos .slide-img img {
+  max-height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+section.videos .slide-img i {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  font-size: 60px;
+  color: #fff;
+}
+section.videos .slide-text {
+  margin-top: 30px;
+  text-align: center;
+}
+section.videos .slide-text .article-title {
+  color: #fff;
+}
+section.videos .swiper {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0 50px;
+}
+section.videos .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.videos .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.videos .swiper-pagination {
+  bottom: -5px;
+}
+section.videos .swiper-pagination-bullet {
+  background-color: #B1AEAE;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
 
 /*# sourceMappingURL=style.css.map */
