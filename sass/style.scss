@@ -337,7 +337,7 @@ section {
 
     &.videos {
         padding: 50px;
-        background-color: var($black-color);
+        background-color: #000;
 
         h2 {
             @include section-title($white-color, $main-color)
@@ -403,4 +403,66 @@ section {
             }
         }
     }
+
+    &.latest-news {
+        padding: 50px;
+
+        .card-text {
+            p {
+                margin-top: 10px;
+                color: $black-color;
+            }
+        }
+
+        .button {
+            @include button($main-color, $white-color, $main-color);
+            font-size: 20px;
+        }
+    }
 }
+
+footer {
+    padding-bottom: 50px;
+
+    .footer-title {
+        margin-bottom: 30px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 5px;
+            background-color: $main-color;
+            right: 0;
+            bottom: -15px;
+        }
+    }
+
+    .link-unstyled {
+        text-decoration: none;
+        color: $black-color;
+    }
+
+    .social-media {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+
+        &-icon {
+            display: inline;
+            margin: 10px;
+
+            img {
+                width: 40px;
+            }
+        }
+    }
+
+    .footer-brand {
+        color: $main-color;
+        font-size: 30px;
+        margin: auto;
+        text-decoration: none;
+    }
+}   
