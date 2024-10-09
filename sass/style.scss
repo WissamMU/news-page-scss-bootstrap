@@ -81,8 +81,8 @@ header {
             &-container {
                 position: absolute;
                 width: 250px;
-                height: 100px;
-                background-color: $white-color;
+                height: 80px;
+                background-color: #fff;
                 border: 1px solid $gray-color;
                 text-align: center;
                 padding: 20px;
@@ -90,14 +90,14 @@ header {
                 top: 50px;
                 right: -115px;
                 visibility: hidden;
-                transition: all 0.5s;
+                transition: all .5s;
 
                 &::after {
                     position: absolute;
                     content: "";
                     width: 20px;
                     height: 20px;
-                    background-color: $white-color;
+                    background-color: #fff;
                     transform: rotate(45deg) translateX(50%);
                     top: -18px;
                     right: 50%;
@@ -107,6 +107,7 @@ header {
 
                 .button {
                     @include button($main-color, $white-color, $main-color);
+                    visibility: hidden;
                 }
             }
 
@@ -118,6 +119,17 @@ header {
                         visibility: visible;
                     }
                 }
+            }
+        }
+
+        .login-button {
+            .button {
+                @include button($main-color, $white-color, $main-color);
+                font-size: 16px;
+                width: 50%;
+                margin: 15px auto;
+                text-align: center;
+                display: none;
             }
         }
 
@@ -601,7 +613,7 @@ footer {
                 &-text {
                     h4 {
                         font-size: 16px;
-                        padding : 5px ;
+                        padding: 5px;
                     }
 
                     p {
