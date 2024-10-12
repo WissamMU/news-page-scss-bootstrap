@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@stoplight/prism-cli": "^5.10.0",
     "sass": "^1.79.4"
   },
   "name": "news-website",
